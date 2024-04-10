@@ -1,0 +1,32 @@
+{
+  "name": "ai-detector",
+  "module": "./src/index.ts",
+  "type": "module",
+  "version": "0.0.1",
+  "bin": {
+    "ai-detector": "cli.js"
+  },
+  "main": "cli.js",
+  "files": [
+    "cli.js",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "bun --watch ./src/index.ts -f ./tests/code/ai-quick-sort.ts",
+    "test": "bun test --timeout 10000",
+    "build": "bun build ./src/index.ts --outfile=cli.js --target=node"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/inquirer": "^9.0.7"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.0.0",
+    "inquirer": "^9.2.17",
+    "openai": "^4.33.0"
+  }
+}

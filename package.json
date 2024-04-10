@@ -1,0 +1,47 @@
+{
+  "name": "ai-detector",
+  "module": "./src/index.ts",
+  "type": "module",
+  "version": "0.0.4",
+  "bin": {
+    "ai-detector": "cli.mjs"
+  },
+  "main": "./src/index.ts",
+  "files": [
+    "cli.mjs",
+    "README.md"
+  ],
+  "author": "Rustam Saryev",
+  "scripts": {
+    "dev": "bun --watch ./src/index.ts -f ./tests/code/ai-quick-sort.ts",
+    "test": "bun test --timeout 10000",
+    "build": "bun build ./src/index.ts --outfile=cli.mjs --target=node"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/inquirer": "^9.0.7"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.0.0",
+    "inquirer": "^9.2.17",
+    "openai": "^4.33.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rsaryev/ai-detector.git"
+  },
+  "keywords": [
+    "detector",
+    "cli",
+    "chatgpt",
+    "openai"
+  ],
+  "bugs": {
+    "url": "https://github.com/rsaryev/ai-detector/issues"
+  },
+  "homepage": "https://github.com/rsaryev/ai-detector#readme"
+}
